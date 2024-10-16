@@ -1,7 +1,7 @@
 # MPI-Parallelized MD Code
 
 In the `src/main.cpp` file, you will find a very simple molecular dynamics code that uses a Lennard-Jones potential to account for interactions between particles.
-Your task is to parallelize this code using MPI.
+Your task is to parallelize this code using **MPI**.
 Do some profiling work (using `MPI_Wtime`) to assist in identifying which regions of the code dominate the cost of the calculation, and to provide you with feedback on the effectiveness of your parallelization work.
 Your grade for this assignment will be partially based on the degree to which your parallelization efforts represent an efficient and intelligent application of MPI parallelization.
 
