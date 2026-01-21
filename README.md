@@ -12,7 +12,7 @@ Parallelize the code using **MPI**.
 
 Your grade for this assignment will be partially based on the degree to which your parallelization efforts represent an efficient and intelligent application of MPI parallelization, including considerations for load balancing, communication costs, and memory usage.
 Ensure that in your parallelized code, the amount of memory required for the simulation does not substantially increase when the code is run on larger numbers of ranks.
-In particular, no rank should ever hold the entire set of particle coordinates simultaneously (this same rule also applies to the forces and velocities).
+In particular, when running on large numbers of ranks, no rank should ever hold the entire set of particle coordinates simultaneously (this same rule also applies to the forces and velocities).
 
 Note that in the double loop that evaluates forces, this code actually evaluates the interaction between each pair of atoms twice:
 
