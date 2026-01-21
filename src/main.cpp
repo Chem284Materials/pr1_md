@@ -168,16 +168,7 @@ void MDSimulation::run(int nsteps, double dt) {
             forces[iparticle] = {0.0, 0.0, 0.0};
         }
 
-        /* Evaluate the energy and forces
-           Note: This code actually evaluates the interaction between each pair of atoms twice.
-           In many molecular dynamics codes, it would be typical for the inner loop over jparticle
-           to be evaluated over the range [iparticle + 1, nparticles] instead of [0, nparticles].
-           That would ensure that each pair of iparticle and jparticle is only evaluated once,
-           and would nearly cut the amount of work required to evaluate forces by a factor of two.
-           Unfortunately, it would also make it a bit trickier to parallelize, so you can be glad
-           that this loop doesn't do that.  You should still be sure to handle the condition
-           inside the inner loop that verifies that the two particles are different.
-        */
+        // Evaluate the energy and forces
         for (int iparticle = 0; iparticle < nparticles; ++iparticle) {
             for (int jparticle = 0; jparticle < nparticles; ++jparticle) {
                 if ( iparticle != jparticle ) { // Only compute the interactions between different particles
