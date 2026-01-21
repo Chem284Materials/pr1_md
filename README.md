@@ -30,7 +30,7 @@ You are not required to implement a neighborlist.
 
 ## Task 3
 
-In at least a couple paragraphs, explain your parallelization strategy.
+In at least a couple of paragraphs, explain your parallelization strategy.
 This explaination should include a clear description of how you distribute data across ranks and how you distribute the work of the calculation.
 Add your answer to the section provided below.
 
