@@ -27,7 +27,7 @@ In addition to parallelizing the code, modify it so that the interaction between
 
 The initial velocities for the system are generated in such a way that you should get the same results regardless of the number of ranks you run on (at least, within the span of short simulations, such as we are using here).
 
-You are not required to implement a neighbor list.
+You are not required to implement a neighbor list, but may do so if you wish.
 
 ## Task 3
 
