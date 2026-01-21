@@ -202,13 +202,13 @@ void MDSimulation::run(int nsteps, double dt) {
     }
 
     // Print output
-    std::cout << "Iteration " << istep << std::endl;
-    std::cout << "    Potential Energy: " << potential_energy << std::endl;
-    std::cout << "    Kinetic Energy:   " << kinetic_energy << std::endl;
-    std::cout << "    Total Energy:     " << potential_energy + kinetic_energy << std::endl << std::endl;
+    std::cout << "Iteration " << istep << '\n';
+    std::cout << "    Potential Energy: " << potential_energy << '\n';
+    std::cout << "    Kinetic Energy:   " << kinetic_energy << '\n';
+    std::cout << "    Total Energy:     " << potential_energy + kinetic_energy << "\n\n";
   }
 
-  std::cout << "Simulation completed." << std::endl;
+  std::cout << "Simulation completed." << '\n';
 }
 
 int main(int argc, char** argv) {
