@@ -1,14 +1,34 @@
 # MPI-Parallelized MD Code
 
 In the `src/main.cpp` file, you will find a very simple molecular dynamics code that uses a Lennard-Jones potential to account for interactions between particles.
-Your task is to parallelize this code using **MPI**.
-Do some profiling work (using `MPI_Wtime`) to assist in identifying which regions of the code dominate the cost of the calculation, and to provide you with feedback on the effectiveness of your parallelization work.
-Your grade for this assignment will be partially based on the degree to which your parallelization efforts represent an efficient and intelligent application of MPI parallelization.
 
+Task 1
+
+Do some profiling work (using `MPI_Wtime`) to identify which regions of the code dominate the cost of the calculation.
+
+Task 2
+
+Parallelize the code using **MPI**.
+
+Your grade for this assignment will be partially based on the degree to which your parallelization efforts represent an efficient and intelligent application of MPI parallelization.
 Ensure that in your parallelized code, the amount of memory required for the computation does not substantially increase when the code is run on larger numbers of ranks.
 In particular, no rank should ever hold the entire set of particle coordinates simultaneously (the same rule applies to the forces and velocities).
-You'll need to think carefully about how you parallelize the double loop over particles (lines `181` and `182`).
+
+Note that in the double loop that evaluates forces, this code actually evaluates the interaction between each pair of atoms twice:
+
+```c++
+        for (int iparticle = 0; iparticle < nparticles; ++iparticle) {
+            for (int jparticle = 0; jparticle < nparticles; ++jparticle) {
+                if ( iparticle != jparticle ) { // Only compute the interactions between different particles
+```
+
+In addition to parallelizing the code, modify it so that the interaction between each unique pair of particles is only evaluated once.
 
 The initial state of the system is generated in such a way that you should get the same results regardless of the number of ranks you run on (at least, within the span of short simulations, such as we are using here).
 
-HINT: You may find that the ring-based communication strategy covered in the lectures can prove helpful here.
+You are not required to implement a neighborlist.
+
+Task 3
+
+In at least a couple paragraphs, explain your parallelization strategy.
+This explaination should include a clear description of how you distribute data across ranks and how you distribute the work of the calculation.
