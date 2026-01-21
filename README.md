@@ -2,11 +2,11 @@
 
 In the `src/main.cpp` file, you will find a very simple molecular dynamics code that uses a Lennard-Jones potential to account for interactions between particles.
 
-Task 1
+## Task 1
 
 Do some profiling work (using `MPI_Wtime`) to identify which regions of the code dominate the cost of the calculation.
 
-Task 2
+## Task 2
 
 Parallelize the code using **MPI**.
 
@@ -28,7 +28,10 @@ The initial state of the system is generated in such a way that you should get t
 
 You are not required to implement a neighborlist.
 
-Task 3
+## Task 3
 
 In at least a couple paragraphs, explain your parallelization strategy.
 This explaination should include a clear description of how you distribute data across ranks and how you distribute the work of the calculation.
+Add your answer to the section provided below.
+
+## Answer
