@@ -1,4 +1,4 @@
-# MPI-Parallelized MD Code
+# MPI Parallelization of an MD Code
 
 In the `src/main.cpp` file, you will find a very simple molecular dynamics code that uses a Lennard-Jones potential to account for interactions between particles.
 
