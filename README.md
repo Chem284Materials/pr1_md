@@ -33,6 +33,7 @@ You are not required to implement a neighbor list, but may do so if you wish.
 
 In at least a couple of paragraphs, explain your parallelization strategy.
 This explanation should include a clear description of how you distribute data across ranks and how you distribute the work of the calculation.
+It should identify the key choices you made when selecting this parallelization strategy and any associated performance trade-offs.
 Add your answer to the section provided below.
 
 ## Answer
