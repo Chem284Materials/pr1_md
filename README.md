@@ -4,10 +4,6 @@ In the `src/main.cpp` file, you will find a very simple molecular dynamics code 
 
 ## Task 1
 
-Do some profiling work (using `MPI_Wtime`) to identify which regions of the code dominate the cost of the calculation.
-
-## Task 2
-
 Parallelize the code using **MPI**.
 
 Your grade for this assignment will be partially based on the degree to which your parallelization efforts represent an efficient and intelligent application of MPI parallelization, including considerations for load balancing, communication costs, and memory usage.
@@ -29,7 +25,7 @@ The initial velocities for the system are generated in such a way that you shoul
 
 You are not required to implement a neighbor list, but may do so if you wish.
 
-## Task 3
+## Task 2
 
 In at least a couple of paragraphs, explain your parallelization strategy.
 This explanation should include a clear description of how you distribute data across ranks and how you distribute the work of the calculation.
